@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: odoo-15-2
+  name: odoo-2022
   labels:
-    app: odoo-15-2
-    tier: odoo15-2
+    app: odoo-2022
+    tier: odoo2022
 spec:
   type: NodePort
   ports:
@@ -13,5 +13,5 @@ spec:
   - port: 8072
     name: longpooling
   selector:
-    app: odoo-15-2
-    tier: odoo15-2
+    app: odoo-2022
+    tier: odoo2022

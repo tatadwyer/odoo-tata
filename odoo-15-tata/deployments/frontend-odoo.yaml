@@ -1,25 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: odoo-15-2
+  name: odoo-2022
   namespace: fleet-local
 spec:
   selector:
     matchLabels:
-      app: odoo-15-2
-      tier: odoo15-2
+      app: odoo-2022
+      tier: odoo2022
   replicas: 1
   template:
     metadata:
       labels:
-        app: odoo-15-2
-        tier: odoo15-2
+        app: odoo-2022
+        tier: odoo2022
     spec:
       containers:
-      - name: odoo-15-2
+      - name: odoo-2022
         env:
           - name: HOST
-            value: 10.10.6.163
+            value: 10.10.6.164
           - name: USER
             value: odoo
           - name: PASSWORD

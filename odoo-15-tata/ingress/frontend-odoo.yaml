@@ -1,17 +1,17 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: odoo-15
+  name: odoo-15-1
   annotations:
     kubernetes.io/ingress.class: nginx
     cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
   rules:
-    - host: odoo-15-afilho.kmee.dev.br
+    - host: odoo-15-1-afilho.kmee.dev.br
       http:
         paths:
         - backend:
-             serviceName: odoo-15
+             serviceName: odoo-15-1
              servicePort: http
           path: /
           pathType: ImplementationSpecific
@@ -22,11 +22,11 @@ spec:
           pathType: ImplementationSpecific
   tls:
     - hosts:
-        - odoo-15-afilho.kmee.dev.br
-      secretName: letsencrypt-odoo15-afilho
+        - odoo-15-1-afilho.kmee.dev.br
+      secretName: letsencrypt-odoo15-1-afilho
 status:
   loadBalancer:
     ingress:
-    - ip: 10.10.6.11
-    - ip: 10.10.6.12
-    - ip: 10.10.6.13
+    - ip: 10.10.6.14
+    - ip: 10.10.6.15
+    - ip: 10.10.6.16

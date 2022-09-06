@@ -1,29 +1,29 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: odoo-15-2
+  name: odoo-15-tata
   annotations:
     kubernetes.io/ingress.class: nginx
     cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
   rules:
-    - host: odoo-15-2-afilho.kmee.dev.br
+    - host: odoo-15-tata.kmee.dev.br
       http:
         paths:
         - backend:
-             serviceName: odoo-15-2
+             serviceName: odoo-15-tata
              servicePort: http
           path: /
           pathType: ImplementationSpecific
         - backend:
-            serviceName: odoo-15-2
+            serviceName: odoo-15-tata
             servicePort: longpooling
           path: /longpooling
           pathType: ImplementationSpecific
   tls:
     - hosts:
-        - odoo-15-2-afilho.kmee.dev.br
-      secretName: letsencrypt-odoo15-2-afilho
+        - odoo-15-tata.kmee.dev.br
+      secretName: letsencrypt-odoo15-tata
 status:
   loadBalancer:
     ingress:

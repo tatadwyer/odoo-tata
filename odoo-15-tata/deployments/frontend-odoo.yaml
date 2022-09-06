@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: odoo-15-tata
+  name: odoo-15
   namespace: fleet-local
 spec:
   selector:
     matchLabels:
-      app: odoo-15-tata
-      tier: odoo15-tata
+      app: odoo-15
+      tier: odoo15
   replicas: 1
   template:
     metadata:
       labels:
-        app: odoo-15-tata
-        tier: odoo15-tata
+        app: odoo-15
+        tier: odoo15
     spec:
       containers:
-      - name: odoo-15-tata
+      - name: odoo-15
         env:
           - name: HOST
             value: 10.10.6.163

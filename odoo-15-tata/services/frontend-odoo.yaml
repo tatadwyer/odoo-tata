@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: odoo-15-tata
+  name: odoo-15
   labels:
-    app: odoo-15-tata
-    tier: odoo15-tata
+    app: odoo-15
+    tier: odoo15
 spec:
   type: NodePort
   ports:
@@ -13,5 +13,5 @@ spec:
   - port: 8072
     name: longpooling
   selector:
-    app: odoo-15-tata
-    tier: odoo15-tata
+    app: odoo-15
+    tier: odoo15
